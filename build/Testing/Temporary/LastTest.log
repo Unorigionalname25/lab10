@@ -1,0 +1,219 @@
+Start testing: Nov 13 01:09 UTC
+----------------------------------------------------------
+1/1 Testing: testingExample
+1/1 Test: testingExample
+Command: "/workspaces/lab10/build/testingExample"
+Directory: /workspaces/lab10/build
+"testingExample" start time: Nov 13 01:09 UTC
+Output:
+----------------------------------------------------------
+Running main() from /workspaces/lab10/googletest/googletest/src/gtest_main.cc
+[==========] Running 10 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 10 tests from TestingSuite
+[ RUN      ] TestingSuite.HighCardVsPair
+Value: 2, Suit: H
+Value: 3, Suit: H
+Value: 4, Suit: H
+Value: 5, Suit: H
+Value: 6, Suit: H
+2H 3H 4H 5H 6H
+Value: 2, Suit: C
+Value: 2, Suit: H
+Value: 2, Suit: S
+Value: 2, Suit: D
+Value: 13, Suit: D
+2C 2H 2S 2D KD
+/workspaces/lab10/testing.cpp:8: Failure
+Expected equality of these values:
+  bestPokerHand("2H 3H 4H 5H 6H", "2C 2H 2S 2D KD")
+    Which is: "Player one wins"
+  "Player two wins"
+
+[  FAILED  ] TestingSuite.HighCardVsPair (0 ms)
+[ RUN      ] TestingSuite.StraightFlushVsPair
+Value: 0, Suit: 0
+Value: 11, Suit: H
+Value: 12, Suit: H
+Value: 13, Suit: H
+Value: 14, Suit: H
+10H JH QH KH AH
+Value: 2, Suit: C
+Value: 2, Suit: H
+Value: 2, Suit: S
+Value: 2, Suit: D
+Value: 13, Suit: D
+2C 2H 2S 2D KD
+/workspaces/lab10/testing.cpp:13: Failure
+Expected equality of these values:
+  bestPokerHand("10H JH QH KH AH", "2C 2H 2S 2D KD")
+    Which is: "Player two wins"
+  "Player one wins"
+
+[  FAILED  ] TestingSuite.StraightFlushVsPair (0 ms)
+[ RUN      ] TestingSuite.FourOfAKindVsFullHouse
+Value: 2, Suit: H
+Value: 2, Suit: D
+Value: 2, Suit: S
+Value: 2, Suit: C
+Value: 3, Suit: H
+2H 2D 2S 2C 3H
+Value: 3, Suit: D
+Value: 3, Suit: S
+Value: 4, Suit: D
+Value: 4, Suit: S
+Value: 4, Suit: C
+3D 3S 4D 4S 4C
+[       OK ] TestingSuite.FourOfAKindVsFullHouse (0 ms)
+[ RUN      ] TestingSuite.FlushVsStraight
+Value: 2, Suit: H
+Value: 4, Suit: H
+Value: 6, Suit: H
+Value: 8, Suit: H
+Value: 0, Suit: 0
+2H 4H 6H 8H 10H
+Value: 9, Suit: D
+Value: 0, Suit: 0
+Value: 11, Suit: C
+Value: 12, Suit: S
+Value: 13, Suit: D
+9D 10S JC QS KD
+/workspaces/lab10/testing.cpp:23: Failure
+Expected equality of these values:
+  bestPokerHand("2H 4H 6H 8H 10H", "9D 10S JC QS KD")
+    Which is: "Player two wins"
+  "Player one wins"
+
+[  FAILED  ] TestingSuite.FlushVsStraight (0 ms)
+[ RUN      ] TestingSuite.PairVsHighCard
+Value: 5, Suit: H
+Value: 5, Suit: D
+Value: 8, Suit: S
+Value: 0, Suit: 0
+Value: 13, Suit: H
+5H 5D 8S 10C KH
+Value: 2, Suit: D
+Value: 3, Suit: H
+Value: 4, Suit: S
+Value: 7, Suit: D
+Value: 14, Suit: D
+2D 3H 4S 7D AD
+/workspaces/lab10/testing.cpp:28: Failure
+Expected equality of these values:
+  bestPokerHand("5H 5D 8S 10C KH", "2D 3H 4S 7D AD")
+    Which is: "Player two wins"
+  "Player one wins"
+
+[  FAILED  ] TestingSuite.PairVsHighCard (0 ms)
+[ RUN      ] TestingSuite.StraightVsThreeOfAKind
+Value: 2, Suit: H
+Value: 3, Suit: D
+Value: 4, Suit: S
+Value: 5, Suit: C
+Value: 6, Suit: H
+2H 3D 4S 5C 6H
+Value: 7, Suit: D
+Value: 7, Suit: S
+Value: 7, Suit: C
+Value: 8, Suit: D
+Value: 9, Suit: D
+7D 7S 7C 8D 9D
+/workspaces/lab10/testing.cpp:33: Failure
+Expected equality of these values:
+  bestPokerHand("2H 3D 4S 5C 6H", "7D 7S 7C 8D 9D")
+    Which is: "Player one wins"
+  "Player two wins"
+
+[  FAILED  ] TestingSuite.StraightVsThreeOfAKind (0 ms)
+[ RUN      ] TestingSuite.TwoPairsVsFlush
+Value: 3, Suit: H
+Value: 3, Suit: D
+Value: 7, Suit: S
+Value: 7, Suit: C
+Value: 9, Suit: H
+3H 3D 7S 7C 9H
+Value: 2, Suit: D
+Value: 4, Suit: D
+Value: 6, Suit: D
+Value: 8, Suit: D
+Value: 13, Suit: D
+2D 4D 6D 8D KD
+[       OK ] TestingSuite.TwoPairsVsFlush (0 ms)
+[ RUN      ] TestingSuite.FullHouseVsStraightFlush
+Value: 8, Suit: H
+Value: 8, Suit: D
+Value: 8, Suit: S
+Value: 9, Suit: C
+Value: 9, Suit: H
+8H 8D 8S 9C 9H
+Value: 0, Suit: 0
+Value: 11, Suit: D
+Value: 12, Suit: D
+Value: 13, Suit: D
+Value: 14, Suit: D
+10D JD QD KD AD
+/workspaces/lab10/testing.cpp:43: Failure
+Expected equality of these values:
+  bestPokerHand("8H 8D 8S 9C 9H", "10D JD QD KD AD")
+    Which is: "Player one wins"
+  "Player two wins"
+
+[  FAILED  ] TestingSuite.FullHouseVsStraightFlush (0 ms)
+[ RUN      ] TestingSuite.HighCardVsPair_2
+Value: 2, Suit: H
+Value: 6, Suit: D
+Value: 7, Suit: S
+Value: 9, Suit: C
+Value: 13, Suit: H
+2H 6D 7S 9C KH
+Value: 7, Suit: D
+Value: 7, Suit: H
+Value: 0, Suit: 0
+Value: 11, Suit: C
+Value: 12, Suit: S
+7D 7H 10S JC QS
+/workspaces/lab10/testing.cpp:48: Failure
+Expected equality of these values:
+  bestPokerHand("2H 6D 7S 9C KH", "7D 7H 10S JC QS")
+    Which is: "Player one wins"
+  "Player two wins"
+
+[  FAILED  ] TestingSuite.HighCardVsPair_2 (0 ms)
+[ RUN      ] TestingSuite.ThreeOfAKindVsHighCard
+Value: 4, Suit: H
+Value: 4, Suit: D
+Value: 4, Suit: S
+Value: 5, Suit: C
+Value: 8, Suit: H
+4H 4D 4S 5C 8H
+Value: 2, Suit: D
+Value: 6, Suit: H
+Value: 0, Suit: 0
+Value: 11, Suit: D
+Value: 12, Suit: S
+2D 6H 10S JD QS
+[       OK ] TestingSuite.ThreeOfAKindVsHighCard (0 ms)
+[----------] 10 tests from TestingSuite (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 3 tests.
+[  FAILED  ] 7 tests, listed below:
+[  FAILED  ] TestingSuite.HighCardVsPair
+[  FAILED  ] TestingSuite.StraightFlushVsPair
+[  FAILED  ] TestingSuite.FlushVsStraight
+[  FAILED  ] TestingSuite.PairVsHighCard
+[  FAILED  ] TestingSuite.StraightVsThreeOfAKind
+[  FAILED  ] TestingSuite.FullHouseVsStraightFlush
+[  FAILED  ] TestingSuite.HighCardVsPair_2
+
+ 7 FAILED TESTS
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Failed.
+"testingExample" end time: Nov 13 01:09 UTC
+"testingExample" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 13 01:09 UTC
